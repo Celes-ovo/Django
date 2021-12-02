@@ -1,3 +1,3 @@
 # Django
 
-reference : https://lucky516.tistory.com/53?category=1010534
+reference : https://lucky516.tistory.com/52?category=1010534
