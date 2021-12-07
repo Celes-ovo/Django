@@ -7,4 +7,5 @@ https://www.youtube.com/watch?v=85X_fDK9OIo&list=PLEYmkoTDkhFwshtF_c00ZE8BbwsEoV
 https://wayhome25.github.io/
 
 https://tutorial.djangogirls.org/en/django_start_project/
+
 https://tutorial.djangogirls.org/ko/django_start_project/
