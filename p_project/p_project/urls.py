@@ -16,9 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+#from . import views
+from bookmark import views
+from polls import views
+
 # 이 url이 뒤에 입력되면 이 사이트로 가라
 urlpatterns = [
     path('polls/', include('polls.urls')),
     path('bookmark/', include('bookmark.urls')),
+    path('index', views.index),
     path('admin/', admin.site.urls),
 ]

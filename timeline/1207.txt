@@ -1,0 +1,31 @@
+GUI, WEB
+
+EXE, WEB
+
+Django, Flask, FastAPI
+
+한국사 요점 정리 및 해석.
+
+몽고db - 되게 간단한가 봄...
+앱 인벤터
+
+
+
+
+
+
+=====================================================
+
+
+cufflinks 0.17.3 requires ipywidgets>=7.0.0, which is not installed.
+cufflinks 0.17.3 requires numpy>=1.9.2, which is not installed.
+cufflinks 0.17.3 requires pandas>=0.19.2, which is not installed.
+cufflinks 0.17.3 requires six>=1.9.0, which is not installed.
+
+
+
+
+
+
+
+
