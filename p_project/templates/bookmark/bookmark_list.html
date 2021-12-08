@@ -18,16 +18,41 @@
     -->
 
 
-    <!--HTML 버튼 만들기-->
+    <style>
+        .btm_image {
+            background-color:rgb(208, 252, 234);
+            border: none;
+            color: rgb(172, 172, 172);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        </style>
+
+
+    <button type="button" onclick="alert('확인하고 싶은 병실의 호수를 선택해 주세요.')">✅ Help</button>
+
+
+    <!--HTML 버튼 만들기
+    <img src="C:\Users\Cyan ovo\workspace\Github\Django\p_project\templates\images\button2.png"/>-->
+
     <form action="http://127.0.0.1:8000/polls">
-        <button type="submit" class="btm_image" id="img_btn"><img src="C:\Users\Cyan ovo\workspace\Github\Django\p_project\templates\images\button2.png"/> 301호</button>
-        <button type="submit" class="btm_image" id="img_btn"><img src="C:\Users\Cyan ovo\workspace\Github\Django\p_project\templates\images\button2.png"/> 302호</button>
-        <button type="submit" class="btm_image" id="img_btn"><img src="C:\Users\Cyan ovo\workspace\Github\Django\p_project\templates\images\button2.png"/> 303호</button>
-        <button type="submit" class="btm_image" id="img_btn"><img src="C:\Users\Cyan ovo\workspace\Github\Django\p_project\templates\images\button2.png"/> 304호</button>
+        <button type="submit" class="btm_image" id="img_btn">301호</button>
+        <button type="submit" class="btm_image" id="img_btn">302호</button>
     </form>
 
-    <button onclick="window.open("http://127.0.0.1:8000/polls","Information","width=430,height=500,location=no,status=no,scrollbars=yes")">button</button>
+    <form action="http://127.0.0.1:8000/polls">
+        <button type="submit" class="btm_image" id="img_btn">303호</button>
+        <button type="submit" class="btm_image" id="img_btn">304호</button>
+    </form>
 
+
+    <!--팝업 형식으로 만들어 보기-->
+    <button onclick="window.open('/polls','window_name','width=800,height=600,location=no,status=no,scrollbars=yes');" class="btm_image">401호</button>
 
     <!-- {{ posts }} -->
     {% for post in posts %}
