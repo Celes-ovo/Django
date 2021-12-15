@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://gano.netlify.app/#patients_list -->
+<html lang="ko" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>GANO</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <link rel="stylesheet" href="./app2_files/main_style.css">
+  <link rel="stylesheet" href="./app2_files/main.css">
+  <link rel="stylesheet" href="./app2_files/css">
+  <link rel="stylesheet" href="./app2_files/icon">
+  <link rel="stylesheet" href="./app2_files/css(1)">
+  <link rel="stylesheet" href="./app2_files/css(2)">
+  <link rel="stylesheet" href="./app2_files/font-awesome.min.css">
+  <link href="./app2_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="./app2_files/p-list-popup.css">
+
+<style>
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Oswald"
+  }
+
+  body {
+    font-family: "Open Sans"
+  }
+
+    {
+    background-color: pink
+  }
+</style></head>
+
+
+
+
+<body class="w3-light-grey">
+  <section id="main">
+    <div class="w3-bar w3-hide-small w3-top">
+
+      <!--네비게이션 바 만들기-->
+      <nav class="w3-sidebar w3-bar-block color_3 w3-animate-left w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;left:0;" id="mySidebar">
+        <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a>
+        <a href="https://gano.netlify.app/#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Home</a>
+        <a href="https://gano.netlify.app/#patients_list" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Patients List</a>
+        <a href="https://gano.netlify.app/#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTACT</a>
+      </nav>
+
+      <!--상단에 고정되어 있는 바 만들기-->
+      <div class="w3-black top_bar">
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-left" onclick="w3_open()"><i class="material-icons w3-xxxlarge item_center">menu</i></a>
+        <a href="https://gano.netlify.app/#" class="w3-center button_nonEffect" style="color:white">
+          <h1>GANO</h1>
+        </a>
+        <a href="https://gano.netlify.app/#patients_list" class="w3-bar-item w3-button w3-right"><i class="material-icons w3-xxlarge item_center">person</i>group</a>
+      </div>
+    </div>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!--헤더 설정-->
+    <div class="w3-content bgpage" style="max-width:1600px;">
+      <header class="w3-display-container w3-wide w3-padding-48 w3-black">
+        <div class="w3-display-middle w3-text-white w3-center">
+          <h1 class="w3-jumbo"><b>GANO</b></h1>
+          <h6>간호사를 위한 <span class="w3-tag">인수인계</span> 서비스</h6>
+        </div>
+      </header>
+      <div class="fpg_display_bottommiddle w3-black w3-wide">
+        <a href="https://gano.netlify.app/#patients_list" class="w3-center button_nonEffect" style="color:white">
+          <i class="fa fa-angle-double-down" style="filter:invert; font-size: 50px; opacity: 0.9"></i>
+        </a>
+      </div>
+    </div>
+
+
+
+    <!--페이지 컨텐츠-->
+    <div class="w3-content color_2" style="max-width:2000px">
+
+      <!--환자 추가 및 미리보기 섹션-->
+      <div class="w3-content patients_list_grid" id="patients_list" name="patients_list">
+        <div class="w3-container w3-padding-64 patients_list_header" style="max-width:1200px">
+          <h1 class="w3-wide w3-center pt-5">Patients List</h1>
+          <p class="w3-opacity w3-center"><i>Remember your patients!</i></p><br>
+          <div class="w3-row-padding w3-padding-32" id="AddOption" style="margin:0 -16px"><div id="patient_0" class="w3-third w3-margin-bottom"><div class="color_1 w3-card-2" style="border-radius:10px;"><div class="patients_grid w3-hover-opacity w3-hover-shadow" onclick="PatientsModal_open(this)"><p id="id_1" class="pl_item_header plus_color text_bolder" style="font-size: 18px">2</p><p class="w3-left-align pl_item_1 text_bolder">입원 날짜</p><p id="date_1" class="w3-left-align pl_item_1-2"></p><p class="w3-left-align pl_item_2 text_bolder">과거력</p><p id="past_1" class="w3-left-align pl_item_2-2"></p><p class="w3-left-align pl_item_3 text_bolder">진단명</p><p id="dia_1" class="w3-left-align pl_item_3-2"></p><p class="w3-left-align pl_item_4 text_bolder">주증상</p><p id="sym_1" class="w3-left-align pl_item_4-2"></p></div><div class="pl_item_5  "><span class="pl_edit"><a onclick="Edit_open(this)" class="w3-section w3-button w3-card-2 w3-hover-shadow pl_edit_color" style="border-radius:10px; width:40%; height:45%"><p class="text_bolder pl_mg">정보 수정</p></a></span><span class="pl_del"><a onclick="onDelete(this)" class="w3-section w3-button w3-card-2 w3-hover-shadow pl_del_color" style="border-radius:10px; width:40%; height:45%"><p class="text_bolder pl_mg">퇴원</p></a></span></div></div></div>
+
+
+            <!--환자별로 인계 내용을 확인할 수 있음-->
+            <!--추가 하는 박스를 만듦-->
+            <div class="w3-third w3-margin-bottom">
+              <div id="dashed" class="patients_plus w3-hover-opacity patients_plus_color w3-card-2 w3-hover-shadow mx-auto mt-3 mb-2 py-3 px-3" style="border-radius:10px;" onclick="P_plusModal_open()">
+                <i class="material-icons md-dark md-inactive patients_plus_position" style="font-size:100px; padding-top: 15px">note_add</i>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Patient Modal -->
+    <div id="PatientsModal" class="dn-modal">
+      <div class="p_plus_grid w3-animate-top dn-color w3-card-4 text_bolder">
+        <div class="plus_1 w3-teal">
+          <p class="w3-large mt-2" id="mp_id"></p><span onclick="PatientsModal_close()" class="w3-button w3-teal w3-large w3-display-topright">×</span>
+        </div>
+        <div class="plus_2 w3-center">
+
+        </div>
+        <div class="plus_3 text_bolder" style="align-self: center">
+          <p class="w3-left-align pt-3" id="mp_date" style="text-decoration:underline; text-underline-position:under;">. 입원 날짜: 2021.12.08</p>
+          <p class="w3-left-align" id="mp_past" style="text-decoration:underline; text-underline-position:under;">. 과거력: 000</p>
+          <p class="w3-left-align" id="mp_dia" style="text-decoration:underline; text-underline-position:under;">. 진단명: 000</p>
+          <p class="w3-left-align" id="mp_sym" style="text-decoration:underline; text-underline-position:under;">. 주증상: 000</p>
+        </div>
+        <a href="https://gano.netlify.app/#" class="plus_4 w3-section w3-center w3-button my-auto w3-card-2 w3-hover-shadow" style="border-radius:10px; width:60%; height:57%">
+          <p class="text_bolder pt-3 w3-center"><i class="fa fa-edit" style="font-size:20px; padding-right: 5px;"></i>인계 작성</p>
+        </a>
+        <a href="https://gano.netlify.app/#" class="plus_5 w3-section w3-center w3-button my-auto w3-card-2 w3-hover-shadow" style="border-radius:10px; width:60%; height:57%">
+          <p class="text_bolder pt-3 w3-center"><i class="fa fa-address-card" style="font-size:20px; padding-right: 5px;"></i>인계 보기</p>
+        </a>
+      </div>
+    </div>
+
+
+    <!-- 환자 추가 버튼 누를 시 나오는 팝업 창-->
+    <div id="P_plusModal" class="dn-modal" style="display: none;">
+      <div class="p_add_grid w3-animate-top dn-color w3-card-4 text_bolder">
+        <div class="plus_1 w3-teal">
+          <p class="w3-large mt-2">Add Patient<span onclick="P_plusModal_close()" class="w3-button w3-teal w3-large w3-display-topright">×</span></p>
+        </div>
+
+        <div class="P_add_1 text_bolder">
+          <p class="w3-left-align"><label><i class="fas fa-portrait"></i> Patient id</label></p>
+          <input class="w3-input P_plus_border" type="text" placeholder="Patient id" id="p_id">
+          <p class="w3-left-align mt-3"><label><i class="fa fa-portrait"></i> 입원 날짜</label></p>
+          <input class="w3-input P_plus_border" type="text" placeholder="입원 날짜" id="p_date">
+          <p class="w3-left-align mt-3"><label><i class="fa fa-portrait"></i> 과거력</label></p>
+          <input id="p_past" class="w3-input P_plus_border" type="text" placeholder="과거력">
+        </div>
+        <div class="P_add_2 text_bolder">
+          <p class="w3-left-align mt-3"><label><i class="fa fa-file-alt"></i> 진단명</label></p>
+          <input id="p_dia" class="w3-input P_plus_border" type="text" placeholder="진단명">
+          <p class="w3-left-align mt-3"><label><i class="fa fa-file-alt"></i> 주증상</label></p>
+          <input id="p_sym" class="w3-input P_plus_border" type="text" placeholder="주증상">
+        </div>
+
+        <div class="P_add_3 text_bolder">
+          <span class="icon-input-btn">
+            <i class="fa fa-user-plus" style="font-size:25px"></i>
+            <input type="button" class="plus_5 w3-card-2 w3-hover-shadow" onclick="P_plusModal_close()" style="border-radius:10px; width:100%; height:100%; text-align:center; padding-left:20px" id="itemAdd" value="환자 추가">
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 환자 Edit 누를 시 나오는 창 -->
+    <div id="Edit" class="dn-modal" style="display: none;">
+      <div class="p_add_grid w3-animate-top dn-color w3-card-4 text_bolder">
+        <div class="plus_1 w3-teal">
+          <p class="w3-large mt-2">Edit Patient<span onclick="Edit_close()" class="w3-button w3-teal w3-large w3-display-topright">×</span></p>
+        </div>
+
+        <div class="P_add_1 text_bolder">
+          <p class="w3-left-align"><label><i class="fas fa-portrait"></i> Patient id</label></p>
+          <input class="w3-input P_plus_border" type="text" placeholder="Patient id" id="E-p_id">
+          <p class="w3-left-align mt-3"><label><i class="fa fa-portrait"></i> 입원 날짜</label></p>
+          <input class="w3-input P_plus_border" type="text" placeholder="입원 날짜" id="E-p_date">
+          <p class="w3-left-align mt-3"><label><i class="fa fa-portrait"></i> 과거력</label></p>
+          <input id="E-p_past" class="w3-input P_plus_border" type="text" placeholder="과거력">
+        </div>
+        <div class="P_add_2 text_bolder">
+          <p class="w3-left-align mt-3"><label><i class="fa fa-file-alt"></i> 진단명</label></p>
+          <input id="E-p_dia" class="w3-input P_plus_border" type="text" placeholder="진단명">
+          <p class="w3-left-align mt-3"><label><i class="fa fa-file-alt"></i> 주증상</label></p>
+          <input id="E-p_sym" class="w3-input P_plus_border" type="text" placeholder="주증상">
+        </div>
+
+        <div class="P_add_3 text_bolder">
+          <span class="icon-input-btn">
+            <i class="fa fa-user-plus" style="font-size:25px"></i>
+            <input id="Editon" type="button" class="plus_5 w3-card-2 w3-hover-shadow" style="border-radius:10px; width:100%; height:100%; text-align:center; padding-left:20px" value="정보 수정">
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app2_files/jquery-latest.js.다운로드"></script>
+    <script src="./app2_files/main_page.js.다운로드"></script>
+    <script src="./app2_files/patient_list.js.다운로드"></script>
+
+
+  </section>
+
+
+
+</body></html>
