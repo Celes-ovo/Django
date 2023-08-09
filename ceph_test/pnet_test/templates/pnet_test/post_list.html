@@ -1,0 +1,21 @@
+<html>
+    <p>Test</p>
+    <head>
+        <body>
+            <hr>
+            <form method="POST">
+              {% csrf_token %}
+              <div>
+                <label for="value_1">1번째 값</label>
+                <input type="text" name="value_1" id="value_1">
+              </div>
+              <div>
+                <label for="value_2">2번째 값</label>
+                <input type="text" name="value_2" id="value_2">
+              </div>
+              <br>
+              <input type="submit" value="compute">
+            </form>
+          </body>
+    </head>
+</html>
