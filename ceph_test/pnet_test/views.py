@@ -11,3 +11,7 @@ def post_list(request):
 
 def post_answer(request):
     return render(request, 'pnet_test/answer.html', {})
+
+# def post_answer(request, value_1, value_2):
+#     template = loader.get_template('templates/post_list.html')
+#     return HttpResponse(template.render(value_1+value_2))

@@ -42,6 +42,7 @@ ds_lock = threading.Lock()
 class MainView(models.Model):
     value_1 = models.CharField(max_length=200, default='')
     value_2 = models.CharField(max_length=200, default='')
+    output = models.CharField(max_length=200, default='')
 
     def add(self, *args):
         input_1 = self.value_1

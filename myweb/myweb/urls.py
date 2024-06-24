@@ -1,4 +1,4 @@
-"""ceph_test URL Configuration
+"""myweb URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -16,8 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-# url 함수 : 다른 urlconf들을 참조할 수 있도록 도와 줌.
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('pnet_test.urls')),
+    path('', include('photo.urls'))
 ]
