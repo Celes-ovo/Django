@@ -1,24 +1,30 @@
 from rest_framework import serializers
 from .models import Games
 
-class GameSerializer(serializers.Serializer):
-    pk = serializers.IntegerField(read_only=True)
-    name = serializers.CharField(max_length=200)
-    release_date = serializers.DateTimeField()
+# class GameSerializer(serializers.Serializer):
+#     pk = serializers.IntegerField(read_only=True)
+#     name = serializers.CharField(max_length=200)
+#     release_date = serializers.DateTimeField()
 
-    game_category = serializers.CharField(max_length=200)
-    played = serializers.BooleanField(required=False)
+#     game_category = serializers.CharField(max_length=200)
+#     played = serializers.BooleanField(required=False)
 
-    def create(self, validated_data):
-        return Games.objects.create(**validated_data)
+#     def create(self, validated_data):
+#         return Games.objects.create(**validated_data)
     
-    def update(self, instance, validated_data):
-        instance.name = validated_data.get('name', instance.name)
-        instance.release_date = validated_data.get('release_date', instance.release_date)
+#     def update(self, instance, validated_data):
+#         instance.name = validated_data.get('name', instance.name)
+#         instance.release_date = validated_data.get('release_date', instance.release_date)
 
-        instance.game_category = validated_data.get('game_category', \
-                                                    instance.game_category)
-        instance.played = validated_data.get('played', instance.played)
+#         instance.game_category = validated_data.get('game_category', \
+#                                                     instance.game_category)
+#         instance.played = validated_data.get('played', instance.played)
 
-        instance.save()
-        return instance
+#         instance.save()
+#         return instance
+
+
+class GameSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Games
+        fields = ('pk', 'name', 'release_date', 'game_category', 'played', 'created')
