@@ -16,3 +16,6 @@ class Post(models.Model):
     # Test 용도
     def meassage_text(self):
         return self.message
+    
+    class Meta:
+        ordering = ['-id']
