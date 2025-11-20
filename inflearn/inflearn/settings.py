@@ -61,7 +61,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     #
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    # "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = 'inflearn.urls'
@@ -69,7 +69,10 @@ ROOT_URLCONF = 'inflearn.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            # File system template loader
+            os.path.join(BASE_DIR, 'instagram', 'templates', 'instagram'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
